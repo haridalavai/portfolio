@@ -3,6 +3,7 @@ import { Inter, Poppins } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/components/theme-provider";
 import CustomCursor from "@/components/cursor";
+import { Analytics } from "@vercel/analytics/react";
 
 const inter = Poppins({
   subsets: ["latin"],
@@ -27,7 +28,10 @@ export default function RootLayout({
         enableSystem
         disableTransitionOnChange
       >
-        <body className={inter.className}>{children}</body>
+        <body className={inter.className}>
+          {children}
+          <Analytics />
+        </body>
       </ThemeProvider>
     </html>
   );
