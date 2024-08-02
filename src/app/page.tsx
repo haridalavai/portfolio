@@ -34,11 +34,15 @@ export default function Home() {
 
   const ref = React.useRef<HTMLDivElement>(null);
   const { theme } = useTheme();
+  console.log(theme);
 
   const defaultOptions = {
     loop: false,
     autoplay: true,
-    animationData: theme === "dark" ? animationDataDark : animationData,
+    animationData:
+      theme === "dark" || theme === "system"
+        ? animationDataDark
+        : animationData,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice",
     },

@@ -9,16 +9,6 @@ import "./Grid.css";
 //   }
 
 const Grid = ({ rows, columns, children }: any) => {
-  const colors = [
-    // all 400 shades
-    "red-400",
-    "pink-400",
-    "purple-400",
-  ];
-  const [randomColor, setRandomColor] = React.useState(
-    colors[Math.floor(Math.random() * colors.length)]
-  );
-
   return (
     <div
       className="grid border border-neutral-200 dark:border-neutral-800"
@@ -30,8 +20,6 @@ const Grid = ({ rows, columns, children }: any) => {
       <div className="grid-guides">
         {Array.from({ length: rows * columns }, (_, index) => {
           // Calculate the x and y position of the cell
-          const c = `bg-${randomColor}`;
-          console.log(c);
           const x = (index % columns) + 1;
           const y = Math.floor(index / columns) + 1;
           return (
