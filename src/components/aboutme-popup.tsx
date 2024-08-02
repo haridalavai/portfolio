@@ -14,12 +14,27 @@ import {
 import Marquee from "./magicui/marquee";
 import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
+import rehypeRaw from "rehype-raw";
 
-const markdownContent = `
-![Hari](https://haridalavai.me/me.jpg) 
-Hey! I’m Hari. Thanks for checking out my portfolio. I’m Srihari, a software engineer with 3 years of experience. Most of the time, you can find me coding 💻, painting 🎨, playing games 🎮, cooking up a storm 🍳, reading anything from science fiction to shampoo bottles 📚, binge-watching anime 📺, overthinking everything 🤔, or sometimes going on treks-because who doesn't love getting their legs hurt for fun? 🥾.
+const markdownContent = `[<img src="https://haridalavai.me/me.jpg" width="250"/>](https://haridalavai.me/me.jpg)
 
-If you like science fiction, fantasy, or anime, we’re destined to be friends! I’m always dreaming up problems and solutions, or figuring out how to make good solutions even better. My latest brainchild is Xcopilot—imagine Siri, but for SaaS products. It lets users chat with the product and magically turns their queries into actionable tasks. 🚀 So, if you’re ready for some tech wizardry, let’s connect!`;
+## Hey 👋
+
+I’m Hari. Thanks for checking out my portfolio. Officially, I’m Srihari, a software engineer with 3 years of experience. Most of the time, you can find me coding 💻, painting 🎨, playing games 🎮, cooking up a storm 🍳, reading anything from science fiction to shampoo bottles 📚, binge-watching anime 📺, overthinking everything 🤔, or sometimes going on treks—because who doesn't love getting their legs hurt for fun? 🥾
+
+If you like science fiction, fantasy, or anime, we’re destined to be friends! I’m always dreaming up problems and solutions, or figuring out how to make good solutions even better. My latest brainchild is Xcopilot—imagine Siri, but for SaaS products. It lets users chat with the product and magically turns their queries into actionable tasks.
+
+**Goals for 2024:**
+
+* [ ] Collaborate with a team of talented product engineers (joining Posthog 🦔 would be amazing)
+* [ ] ~Launch Xcopilot~ Relaunch XCopilot
+* [x] ~Learn to play the guitar~
+* [ ] Write more blog posts
+* [ ] Trip to Andaman and Nicobar Islands
+* [ ] If possible, start livestreaming on Twitch to share progress on my projects.
+
+🚀 So, if you’re ready for some tech wizardry, let’s connect!
+`;
 
 const AboutMePopup = () => {
   const [isAboutMeOpen, setIsAboutMeOpen] = React.useState(false);
@@ -37,13 +52,15 @@ const AboutMePopup = () => {
         </Marquee>
       </DialogTrigger>
       <DialogContent className=" fixed top-0 w-full h-screen pt-16 overflow-auto">
-        <DialogHeader className="border border-gray-500 p-3">
-          <DialogTitle>About Me</DialogTitle>
-        </DialogHeader>
-        <p className="border border-gray-500 border-t-0 p-3 ">
-          Content goes here
-          <Markdown remarkPlugins={[remarkGfm]}>{markdownContent}</Markdown>
-        </p>
+        <div className="border dark:border-neutral-700  px-4 ">
+          <Markdown
+            remarkPlugins={[remarkGfm]}
+            rehypePlugins={[rehypeRaw]}
+            className="prose dark:prose-invert"
+          >
+            {markdownContent}
+          </Markdown>
+        </div>
         <DialogFooter className="sm:justify-start mt-3">
           <DialogClose asChild>
             <Button type="button" variant="secondary">
