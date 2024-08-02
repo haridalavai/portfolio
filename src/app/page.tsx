@@ -8,6 +8,7 @@ import Image from "next/image";
 import Lottie from "react-lottie";
 
 import animationData from "./hello.json";
+import animationDataDark from "./hello-dark.json";
 import ModeToggle from "@/components/mode-toggle";
 import React, { useEffect, useState } from "react";
 import WordRotate from "@/components/magicui/word-rotate";
@@ -20,26 +21,28 @@ import { data } from "./data";
 import ProjectsCard from "@/components/projects-card";
 import BlogCard from "@/components/blog-card";
 import AboutMePopup from "@/components/aboutme-popup";
+import { useTheme } from "next-themes";
 
 const ROW_WIDTH = 25;
 const COLUMN_WIDTH = 25;
 
 export default function Home() {
-  console.log(animationData);
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice",
-    },
-  };
   const [rows, setRows] = useState(45);
   const [columns, setCoumns] = useState(18);
   const [idk, setIdk] = useState(5);
   const [isAboutMeOpen, setIsAboutMeOpen] = useState(false);
 
   const ref = React.useRef<HTMLDivElement>(null);
+  const { theme } = useTheme();
+
+  const defaultOptions = {
+    loop: false,
+    autoplay: true,
+    animationData: theme === "dark" ? animationDataDark : animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice",
+    },
+  };
 
   useEffect(() => {
     // update rows and cols when window innerheight changes
@@ -78,8 +81,14 @@ export default function Home() {
           <GridCell rowStart={2} rowEnd={4} columnStart={6} columnEnd={8}>
             <Icons.logoLoading className="w-17 h-17" />
           </GridCell>
-          <GridCell rowStart={2} rowEnd={4} columnStart={8} columnEnd={14}>
-            <Lottie options={defaultOptions} />
+          <GridCell
+            rowStart={2}
+            rowEnd={4}
+            columnStart={8}
+            columnEnd={14}
+            className="dark:text-white"
+          >
+            <Lottie options={defaultOptions} segments={[0, 406]} />
           </GridCell>
           <GridCell rowStart={4} rowEnd={6} columnStart={4} columnEnd={16}>
             <p className="text-3xl  sm:text-4xl md:text-6xl font-bold text-center">

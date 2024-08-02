@@ -18,28 +18,33 @@ import ModeToggle from "../mode-toggle";
 const DATA = {
   navbar: [
     { href: "#", icon: Icons.home, label: "Home" },
-    { href: "#", icon: Icons.pencil, label: "Blog" },
+    // { href: "https://medium.com/@neon._.builds", icon: Icons.pencil, label: "Blog" },
   ],
   contact: {
     social: {
       GitHub: {
         name: "GitHub",
-        url: "#",
+        url: "https://github.com/haridalavai",
         icon: Icons.github,
       },
       LinkedIn: {
         name: "LinkedIn",
-        url: "#",
+        url: "https://www.linkedin.com/in/sriharidalavai/",
         icon: Icons.linkedin,
       },
       X: {
         name: "X",
-        url: "#",
+        url: "https://x.com/dalavai_hari",
         icon: Icons.x,
+      },
+      blog: {
+        name: "Blog",
+        url: "https://medium.com/@neon._.builds",
+        icon: Icons.pencil,
       },
       email: {
         name: "Send Email",
-        url: "#",
+        url: "mailto:dalavai.hari@gmail.com",
         icon: Icons.email,
       },
     },

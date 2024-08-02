@@ -21,7 +21,7 @@ const Grid = ({ rows, columns, children }: any) => {
 
   return (
     <div
-      className="grid"
+      className="grid border border-neutral-200 dark:border-neutral-800"
       style={{
         "--rows": rows,
         "--columns": columns,
@@ -36,7 +36,7 @@ const Grid = ({ rows, columns, children }: any) => {
           const y = Math.floor(index / columns) + 1;
           return (
             <div
-              className={`grid-guide hover:bg-${randomColor}`}
+              className={`grid-guide border border-neutral-200 dark:border-neutral-800 `}
               style={{ "--x": x, "--y": y }}
             />
           );

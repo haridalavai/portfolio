@@ -26,7 +26,7 @@
 
   grid-template-columns: repeat(var(--columns), var(--column-width));
   grid-template-rows: repeat(var(--rows), var(--row-height));
-  border: 1px solid theme("colors.gray.200");
+  /* border: 1px solid theme("colors.gray.200"); */
   border-right: none;
   border-bottom: none;
   position: relative;
@@ -44,7 +44,7 @@
   grid-column-end: span 1;
   grid-row-start: var(--y);
   grid-row-end: span 1;
-  border: 1px solid theme("colors.gray.300");
+  /* border: 1px solid theme("colors.gray.300"); */
   border-left: none;
   /* height: calc(100% / var(--rows) * var(--columns)); */
   /* height: 10px; */
