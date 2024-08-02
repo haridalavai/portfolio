@@ -16,11 +16,10 @@ import Markdown from "react-markdown";
 import remarkGfm from "remark-gfm";
 
 const markdownContent = `
-Hey! Thanks for checking out my website. 
-I'm srihari, most of the time you can find me coding or painting or playing games or cooking or reading or watching anime or overthinking or sometimes go on treks, out of pure motivation and get my legs hurt very badly . If you like 
-science fiction, fantasy, or anime, we can be friends.
-I constantly think about problems and possible solutions or how to improve existing solutions. 
-`;
+![Hari](https://haridalavai.me/me.jpg) 
+Hey! I’m Hari. Thanks for checking out my portfolio. I’m Srihari, a software engineer with 3 years of experience. Most of the time, you can find me coding 💻, painting 🎨, playing games 🎮, cooking up a storm 🍳, reading like a bookworm 📚, binge-watching anime 📺, overthinking everything 🤔, or sometimes going on treks because I thought it was a good idea—until my legs remind me otherwise 🥲.
+
+If you like science fiction, fantasy, or anime, we’re destined to be friends! I’m always dreaming up problems and solutions, or figuring out how to make good solutions even better. My latest brainchild is Xcopilot—imagine Siri, but for SaaS products. It lets users chat with the product and magically turns their queries into actionable tasks. 🚀 So, if you’re ready for some tech wizardry, let’s connect!`;
 
 const AboutMePopup = () => {
   const [isAboutMeOpen, setIsAboutMeOpen] = React.useState(false);
