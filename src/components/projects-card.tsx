@@ -84,7 +84,7 @@ const ProjectsCard = ({
         rowEnd={rowStart + 4}
         {...props}
       >
-        <p className="text-xs sm:text-xl md:text-xl font-mono font-light ">
+        <p className="text-xs sm:text-xl md:text-xl lg:text-2xl font-mono font-light ">
           {description}
         </p>
       </GridCell>

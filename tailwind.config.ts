@@ -10,9 +10,6 @@ const config = {
   ],
   prefix: "",
   theme: {
-    fontSize: {
-      xs: "0.6rem",
-    },
     container: {
       center: true,
       padding: "2rem",
@@ -34,6 +31,9 @@ const config = {
         grab: "var(--f-cursor-grab), grab",
         grabbed: "var(--f-cursor-grabbed), grabbed",
         text: "var(--f-cursor-text), text",
+      },
+      fontSize: {
+        xs: "0.6rem",
       },
       colors: {
         border: "hsl(var(--border))",
