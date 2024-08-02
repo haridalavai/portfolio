@@ -25,9 +25,7 @@ const BlogCard = ({
         rowEnd={rowEnd + 1}
         {...props}
       >
-        <p className="text-xs sm:text-xl md:text-3xl font-mono font-bold ">
-          {id}
-        </p>
+        <p className="text-xs sm:text-xl md:text-3xl  font-bold ">{id}</p>
       </GridCell>
       <GridCell
         className="justify-start pl-3"

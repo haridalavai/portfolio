@@ -31,9 +31,7 @@ const ExperienceCard = ({
         rowEnd={rowEnd}
         {...props}
       >
-        <p className="text-xs sm:text-xl md:text-3xl font-mono font-bold ">
-          {id}
-        </p>
+        <p className="text-xs sm:text-xl md:text-3xl  font-bold ">{id}</p>
       </GridCell>
       <GridCell
         className="justify-start pl-3"
@@ -69,6 +67,7 @@ const ExperienceCard = ({
       >
         <p className="text-xs sm:text-xl md:text-3xl font-mono">{date}</p>
       </GridCell>
+
       {/* <GridCell
         columnStart={2}
         columnEnd={18}

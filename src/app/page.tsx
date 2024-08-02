@@ -22,12 +22,13 @@ import ProjectsCard from "@/components/projects-card";
 import BlogCard from "@/components/blog-card";
 import AboutMePopup from "@/components/aboutme-popup";
 import { useTheme } from "next-themes";
+import { cn } from "@/lib/utils";
 
 const ROW_WIDTH = 25;
 const COLUMN_WIDTH = 25;
 
 export default function Home() {
-  const [rows, setRows] = useState(45);
+  const [rows, setRows] = useState(55);
   const [columns, setCoumns] = useState(18);
   const [idk, setIdk] = useState(5);
   const [isAboutMeOpen, setIsAboutMeOpen] = useState(false);
@@ -53,7 +54,7 @@ export default function Home() {
     const handleResize = () => {
       // setRows(Math.max(15));
       setCoumns(Math.max(18));
-      setRows(Math.max(Math.floor(window.innerHeight / ROW_WIDTH), 45));
+      setRows(Math.max(Math.floor(window.innerHeight / ROW_WIDTH), 55));
       // setCoumns(Math.max(Math.floor(window.innerWidth / COLUMN_WIDTH), 8));
       // if (ref.current) {
       //   if (ref?.current?.scrollHeight > ref?.current?.clientHeight) {
@@ -83,7 +84,8 @@ export default function Home() {
       <div className=" flex items-start justify-center mt-6 ">
         <Grid rows={rows} columns={columns}>
           <GridCell rowStart={2} rowEnd={4} columnStart={6} columnEnd={8}>
-            <Icons.logoLoading className="w-17 h-17" />
+            {/* <Icons.logoLoading className="w-17 h-17" /> */}
+            <img src="./giphy.webp" alt="hello" className="w-17" />
           </GridCell>
           <GridCell
             rowStart={2}
@@ -92,7 +94,10 @@ export default function Home() {
             columnEnd={14}
             className="dark:text-white"
           >
-            <Lottie options={defaultOptions} segments={[0, 406]} />
+            {/* <Lottie options={defaultOptions} segments={[0, 406]} /> */}
+            <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl xl:8xl font-bold text-center">
+              Hello!
+            </h1>
           </GridCell>
           <GridCell rowStart={4} rowEnd={6} columnStart={4} columnEnd={16}>
             <p className="text-3xl  sm:text-4xl md:text-6xl font-bold text-center">
@@ -106,7 +111,7 @@ export default function Home() {
           <GridCell rowStart={8} rowEnd={8} columnStart={1} columnEnd={19}>
             <span className="flex gap-2 justify-center">
               <Icons.cornerLeftUp className="w-4 h-4 transform:  md:h-6 md:w-6 " />
-              <p className="text-xs sm:text-md md:text-xl font-mono ">
+              <p className="text-xs sm:text-md md:text-xl ">
                 click on the moving thing to read more about me!
               </p>
             </span>
@@ -115,7 +120,7 @@ export default function Home() {
           <GridCell rowStart={9} rowEnd={9} columnStart={1} columnEnd={19}>
             <span className="flex gap-2 justify-center items-end">
               <Icons.cornerLeftDown className="w-4 h-4 transform:  md:h-6 md:w-6 " />
-              <p className="text-xs sm:text-md md:text-xl font-mono ">
+              <p className="text-xs sm:text-md md:text-xl   ">
                 scroll down to learn what I do!
               </p>
             </span>
@@ -126,7 +131,7 @@ export default function Home() {
             rowStart={11}
             rowEnd={13}
             columnStart={2}
-            columnEnd={6}
+            columnEnd={7}
             color="purple-500"
           />
 
@@ -219,6 +224,55 @@ export default function Home() {
               rowEnd={41 + 2 * index}
             />
           ))}
+
+          <GridCell
+            rowStart={43}
+            rowEnd={45}
+            columnStart={1}
+            columnEnd={19}
+            className="justify-center"
+          >
+            <a
+              href="https://haridalavai.me/resume.pdf"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span className="flex gap-2 justify-center items-end">
+                <p className="text-xs sm:text-md md:text-xl   ">
+                  click here to view my resume!
+                </p>
+              </span>
+            </a>
+          </GridCell>
+          {/* <GridCell
+            rowStart={45}
+            rowEnd={45}
+            columnStart={1}
+            columnEnd={2}
+            className="justify-center"
+          >
+            <p className="text-3xl">{"👹👺🤡💩👻💀☠️👽👾🤖🎃"}</p>
+          </GridCell> */}
+          {["👹", "👺", "🤡", "💩", "👻", "💀", "👽", "👾", "🤖", "🎃"].map(
+            (emoji, index) => {
+              return (
+                <GridCell
+                  rowStart={46}
+                  rowEnd={46}
+                  columnStart={5 + index}
+                  columnEnd={6 + index}
+                  className={cn([
+                    "justify-center bg-transparent",
+                    "hover: transform hover:scale-105 hover:shadow-lg shadow-none cursor-pointer",
+                  ])}
+                >
+                  <a className="text-3xl sm:text-5xl md:text-7xl lg:text-9xl">
+                    {emoji}
+                  </a>
+                </GridCell>
+              );
+            }
+          )}
         </Grid>
       </div>
       {/* bottom right */}

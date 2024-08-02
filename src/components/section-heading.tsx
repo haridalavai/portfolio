@@ -30,8 +30,8 @@ const SectionHeading = ({
       )}
       rowStart={rowStart}
       rowEnd={rowEnd}
-      columnStart={columnStart}
-      columnEnd={columnEnd}
+      columnStart={2}
+      columnEnd={18}
       onClick={() => {
         document
           .getElementById(title.toLowerCase())
@@ -40,7 +40,7 @@ const SectionHeading = ({
     >
       <a
         className={cn([
-          "text-xs sm:text-2xl md:text-3xl font-mono font-bold ",
+          "text-xs sm:text-xl md:text-3xl  font-bold ",
           `decoration-${color} underline`,
         ])}
       >

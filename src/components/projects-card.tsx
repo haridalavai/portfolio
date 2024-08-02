@@ -33,9 +33,7 @@ const ProjectsCard = ({
         rowEnd={rowEnd + 1}
         {...props}
       >
-        <p className="text-xs sm:text-xl md:text-3xl font-mono font-bold ">
-          {id}
-        </p>
+        <p className="text-xs sm:text-xl md:text-3xl  font-bold ">{id}</p>
       </GridCell>
       <GridCell
         className="justify-start pl-3"
@@ -46,7 +44,7 @@ const ProjectsCard = ({
         {...props}
       >
         <a
-          className="text-xs sm:text-xl md:text-2xl font-mono font-bold "
+          className="text-xs sm:text-xl md:text-2xl  font-bold "
           href={link}
           target="_blank"
           rel="noreferrer"
@@ -73,7 +71,7 @@ const ProjectsCard = ({
         {...props}
       >
         <a href={link} target="_blank" rel="noreferrer">
-          <Icons.link className="h-3 w-3 md:h-5 md:w-5 lg:h-7 lg:w-7" />
+          <Icons.pixelLink className="h-3 w-3 md:h-5 md:w-5 lg:h-7 lg:w-7" />
         </a>
       </GridCell>
       <GridCell
