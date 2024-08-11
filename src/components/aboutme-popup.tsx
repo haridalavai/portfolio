@@ -26,7 +26,7 @@ If you like science fiction, fantasy, or anime, we’re destined to be friends! 
 
 **Goals for 2024:**
 
-* [ ] Collaborate with a team of talented product engineers (joining Posthog 🦔 would be amazing)
+* [ ] Collaborate with a team of talented product engineers. Joining a team working on customer service | CRM products would be amazing!
 * [ ] ~Launch Xcopilot~ Relaunch XCopilot
 * [x] ~Learn to play the guitar~
 * [ ] Write more blog posts
@@ -47,7 +47,7 @@ const AboutMePopup = () => {
               <span className="text-3xl  sm:text-4xl md:text-6xl font-bold text-black dark:text-white">
                 {word}
               </span>
-            )
+            ),
           )}
         </Marquee>
       </DialogTrigger>
