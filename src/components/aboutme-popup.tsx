@@ -26,8 +26,8 @@ If you like science fiction, fantasy, or anime, we’re destined to be friends! 
 
 **Goals for 2024:**
 
-* [ ] Collaborate with a team of talented product engineers. Joining a team working on customer service | CRM products would be amazing!
-* [ ] ~Launch Xcopilot~ Relaunch XCopilot
+* [ ] Collaborate with a team of talented product engineers. Joining a team working on customer service | marketing products would be amazing!
+* [ ] ~Launch Xcopilot~ Open source XCopilot
 * [x] ~Learn to play the guitar~
 * [ ] Write more blog posts
 * [ ] Trip to Andaman and Nicobar Islands
